@@ -10,6 +10,7 @@ export class CalculateController {
     //Digitos (digit1=0)(digit2=1)
     getSumar(@Query() datosQuery) {
         let results: number = this.calculateService.sumar2Digitos(datosQuery);
+        console.log(results);
         return {
             'status': true,
             'nameQuery': datosQuery['name'],
@@ -22,6 +23,7 @@ export class CalculateController {
     //Digitos (digit1=0)(digit2=1)
     getRestar(@Query() datosQuery) {
         let results: number = this.calculateService.restar2Digitos(datosQuery);
+        console.log(results);
         return {
             'status': true,
             'nameQuery': datosQuery['name'],
@@ -34,6 +36,7 @@ export class CalculateController {
     //Digitos (digit1=0)(digit2=1)
     getMult(@Query() datosQuery) {
         let results: number = this.calculateService.mult2Digitos(datosQuery);
+        console.log(results);
         return {
             'status': true,
             'nameQuery': datosQuery['name'],
@@ -46,6 +49,7 @@ export class CalculateController {
     //Digitos (digit1=0)(digit2=1)
     getDiv(@Query() datosQuery) {
         let results: number = this.calculateService.div2Digitos(datosQuery);
+        console.log(results);
         return {
             'status': true,
             'nameQuery': datosQuery['name'],
@@ -64,6 +68,7 @@ export class CalculateController {
     @Post('sum')
     createSumar(@Body() Body){
         let results: number = this.calculateService.sum2Digitos(Body);
+        console.log(results);
         return {
             'status': true,
             'namePost': Body['nameP'],
@@ -74,6 +79,7 @@ export class CalculateController {
     @Post('res')
     createRestar(@Body() Body){
         let results: number = this.calculateService.res2Digitos(Body);
+        console.log(results);
         return {
             'status': true,
             'namePost': Body['nameP'],
@@ -84,6 +90,7 @@ export class CalculateController {
     @Post('mul')
     createMult(@Body() Body){
         let results: number = this.calculateService.mul2Digitos(Body);
+        console.log(results);
         return {
             'status': true,
             'namePost': Body['nameP'],
@@ -94,6 +101,7 @@ export class CalculateController {
     @Post('di')
     createDiv(@Body() Body){
         let results: number = this.calculateService.di2Digitos(Body);
+        console.log(results);
         return {
             'status': true,
             'namePost': Body['nameP'],
